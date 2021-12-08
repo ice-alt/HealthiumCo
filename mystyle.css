@@ -1,0 +1,178 @@
+/* Desktop - 1 */
+
+
+
+body {
+  background-color: #FF3366;
+
+  background-image: url("Design2.png"), url("Design2.png");
+  min-height: 560px, 560px;
+  background-repeat: repeat-y, repeat-y;
+  background-position: left, right;
+  background-attachment: fixed;
+
+}
+
+
+
+.landingpagetext{
+	position: absolute;
+	width: 396px;
+	height: 82px;
+	left: 522px;
+	top: 194px;
+
+	font-family: serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 72px;
+	line-height: 83px;
+	text-align: center;
+
+	color: #FFFFFF;
+}
+
+.landingpagetext2{
+	position: absolute;
+	width: 396px;
+	height: 82px;
+	left: 522px;
+	top: 194px;
+
+	font-family: serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 72px;
+	line-height: 83px;
+	text-align: center;
+
+	color: #FFFFFF;
+}
+
+.logo{
+
+	margin-left: 890px;
+	margin-top: 220px;
+	
+}
+
+.slogan{
+	position: absolute;
+	width: 688px;
+	height: 53px;
+	left: 377px;
+	top: 300px;
+
+	font-family: serif;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 28px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+
+.button{
+	position: absolute;
+	width: 366px;
+	height: 84px;
+	left: 537px;
+	top: 463px;
+
+	background-color: #2EC4B6;
+	border-radius: 50px;
+}
+
+
+.button1:hover{
+	background-color: #00FFFF;
+	transition-duration: 0.4s;
+	
+}
+
+
+.text1{
+
+	font-family: serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 0px;
+	text-align: center;
+
+	color: #FFFFFF;
+}
+
+
+/* Desktop - 2 */
+
+
+.HealthiumtextReg{
+	font-family: serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 56px;
+	line-height: 70px;
+	text-align: center;
+	color: #FFFFFF;
+
+}
+
+.Registrationtext{
+	font-family: serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 40px;
+	line-height: 30px;
+	text-align: center;
+	color: #FFFFFF;
+
+}
+
+
+.userRegAndLogIntext{
+	font-family: serif;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+	color: #FFFFFF;
+	font-size: 20px;
+	margin-left: 350px;
+}
+
+
+.buttonRegister{
+	width: 200px;
+	height: 60px;
+	left: 200px;
+	top: 200px;
+	background-color: #2EC4B6;
+	border-radius: 50px;
+	color: #FFFFFF;
+	text-align: center;
+	font-style: serif;
+	font-size: 20px;
+	margin-left: 570px;
+
+}
+
+.buttonRegister1:hover{
+	background-color: #00FFFF;
+	transition-duration: 0.4s;
+}
+
+.logintext{
+	font-family: serif;
+	font-style: normal;
+	font-weight: normal;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 20px;
+	text-decoration-line: underline;
+	text-decoration-color:#FFFFFF;
+
+}
+
+
+

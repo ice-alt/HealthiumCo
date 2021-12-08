@@ -1,0 +1,223 @@
+body {
+  background-color: #FF3366;
+
+  background-image: url("Design2.png"), url("Design2.png");
+  min-height: 560px, 560px;
+  background-repeat: repeat-y, repeat-y;
+  background-position: left, right;
+  background-attachment: fixed;
+
+}
+
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+li {
+  float: left;
+}
+
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 20px;
+}
+
+
+li a:hover {
+  background-color: #AA336A;
+  border-radius: 50px;
+}
+
+
+
+
+.titletext{
+  position: absolute;
+  width: 396px;
+  height: 82px;
+  left: 522px;
+  font-family: serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 0px;
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+
+.welcometext{
+  font-family: serif;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: 130px;
+  font-size: 25px;
+  
+}
+
+
+.buttonChoice{
+  width: 200px;
+  height: 60px;
+  left: 200px;
+  top: 200px;
+  background-color: #2EC4B6;
+  border-radius: 50px;
+  color: #FFFFFF;
+  text-align: center;
+  font-style: serif;
+  font-size: 20px;
+  margin-top: 50px;
+  margin-left: 300px;
+  
+ 
+
+}
+
+.buttonChoice1:hover{
+  background-color: #00FFFF;
+  transition-duration: 0.4s;
+}
+
+
+.buttonChoicesecond{
+  width: 200px;
+  height: 60px;
+  left: 200px;
+  top: 200px;
+  background-color: #2EC4B6;
+  border-radius: 50px;
+  color: #FFFFFF;
+  text-align: center;
+  font-style: serif;
+  font-size: 20px;
+  margin-top: 50px;
+  margin-left: 500px;
+  
+}
+
+
+.letshelpyoutext{
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+.descriptiontext{
+  color: #FFFFFF;
+  font-style: italic;
+  text-align: center;
+  font-size: 20px;
+}
+
+
+.buttonKeepFitchoice{
+  width: 300px;
+  height:70px;
+  left: 300px;
+  top: 300px;
+  background-color: #2EC4B6;
+  border-radius: 50px;
+  color: #FFFFFF;
+  text-align: center;
+  font-style: serif;
+  font-size: 20px;
+  margin-top: 50px;
+  margin-left: 500px;
+}
+
+
+.buttonKeepFitchoicehover:hover{
+  background-color: #00FFFF;
+  transition-duration: 0.4s;
+}
+
+
+.buttonKeepFitchoice2{
+  width: 300px;
+  height:70px;
+  left: 300px;
+  top: 300px;
+  background-color: #2EC4B6;
+  border-radius: 50px;
+  color: #FFFFFF;
+  text-align: center;
+  font-style: serif;
+  font-size: 20px;
+  margin-top: 80px;
+  margin-left: 500px;
+}
+
+
+.buttonKeepFitchoice2hover:hover{
+  background-color: #00FFFF;
+  transition-duration: 0.4s;
+}
+
+
+#contributors {
+  width: 100%;
+  font-size: 20px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+#contributors td{
+  color: white;
+  padding: 8px;
+  text-align: center;
+}
+
+#contributors td a{
+  color: white;
+}
+
+#contributors td a: visited{
+  color: white;
+}
+
+
+#contributors tr:nth-child(even){background-color: #FF10F0;}
+
+#contributors th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #2EC4B6;
+  color: white;
+}
+
+.descriptiontext2{
+  color: #FFFFFF;
+  font-style: italic;
+  text-align: left;
+  font-size: 20px;
+}
+
+
+.appointmentconfirmed{
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 50px
+}
+
+
+.textarea{
+  color: pink;
+  align-content: center;
+  margin-left: 330px;
+}
