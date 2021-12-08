@@ -3,7 +3,7 @@
 
      define("servername", "localhost");
      define("username", "root");
-     define("password", "");
+     define("password", "Ice2002.");
      define("database", "healthiumco");
 
 
