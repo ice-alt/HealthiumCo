@@ -1,34 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
 	<title>HealthiumCo</title>
 	<link href="mystyle.css" rel="stylesheet" type="text/css">
-
+	<link href="mystyle2.css" rel="stylesheet" type="text/css">
+	<style>
+		<?php include("mystyle2.css"); ?>
+	</style>
 
 </head>
 
 <body>
 
-<script>
-	function PasswordMatch(){
-		var firstpass=document.f1.pwd.value;
-		var secondpass=document.f1.pwd2.value;
+<!--Confirm Password Validation-->
+	<script>
+		function PasswordMatch(){
+			var firstpass=document.f1.pwd.value;
+			var secondpass=document.f1.pwd2.value;
 
-		if(firstpass===secondpass){
-			return true;
-		}
-		else{
-			alert("Passwords must be the same!");
-			return false;
+			if(firstpass===secondpass){
+				return true;
+				}
+			else{
+				alert("Passwords must be the same!");
+				return false;
 		}
 
 	}
-</script>
+	</script>
+
+
+<!--Link to Admin Login page-->
+	<ul>
+		<li ><a href="admin_login.php">Log In As Admin</a></li>
+	</ul>
+
+
+	<br><br>
+
 
 	<h1 class="HealthiumtextReg">HealthiumCo</h1>
 	<h2 class="Registrationtext">Registration</h1>
 
+<!--Registration form-->
 	<form name="f1" action="" method="post" onsubmit="return PasswordMatch()">
 		<label class="userRegAndLogIntext">First name: </label><input type="text" name="fname" size="60" placeholder="First name" required/><br><br>
 		<label class="userRegAndLogIntext">Last name:  </label><input type="text" name="lname" size="60" placeholder="Last name" required/><br><br>
@@ -39,6 +55,7 @@
 		<input type="submit" name="submit" class="buttonRegister buttonRegister1" value="Register">
 
 
+<!--Link to Login page-->
 		<a href="IndividualUserLogin.php"><p class="logintext">Log In</p></a>
 
 	</form>
@@ -47,37 +64,38 @@
 
 	<?php
 
-require ("IndividualDatabaseConn.php");
+		//Connects to the database
+		require ("IndividualDatabaseConn.php");
     
 
-//Inserting data
+		//Button that triggers insertion of data
+		if(isset($_POST["submit"])){
 
-if(isset($_POST["submit"])){
-
-$Fname = $_POST['fname'];
-$Lname = $_POST['lname'];
-$Email = $_POST['email'];
-$Username = $_POST['username'];
-//$Password = password_hash($_POST['pwd'], PASSWORD_DEFAULT) ;
-$Password = md5($_POST['pwd']);
+		$Fname = $_POST['fname'];
+		$Lname = $_POST['lname'];
+		$Email = $_POST['email'];
+		$Username = $_POST['username'];
+		$Password = md5($_POST['pwd']);
 
 
-
-$query = "INSERT INTO userregister (Fname,Lname,Email,Username,Password) VALUES('$Fname', '$Lname', '$Email', '$Username', '$Password')";
-
-
-
-mysqli_query($conn, $query);
-
-header("location: IndividualUserLogin.php");
+		//Query for inserting data
+		$query = "INSERT INTO userregister (Fname,Lname,Email,Username,Password) VALUES('$Fname', '$Lname', '$Email', '$Username', '$Password')";
 
 
-$conn->close();
+		//Execution of query
+		mysqli_query($conn, $query);
 
-}
+
+		//Redirects to another page
+		header("location: IndividualUserLogin.php");
 
 
-?>
+		$conn->close();
+
+		}
+
+
+	?>
 
 </body>
 </html>

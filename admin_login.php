@@ -21,55 +21,61 @@
   		margin: 8px 0;
   		box-sizing: border-box;
 }
-	</style>
+</style>
 
 
 </head>
 
-
-
 	<body>
 
+		
+		
+
+
+		
 		
 		<h1 class="HealthiumtextReg">HealthiumCo</h1>
 		<h2 class="Registrationtext">Log In</h1>
 
-			<!--Login form-->
+			<!--Login Form-->
 			<form name="f2" method="post">
 				<label class="userRegAndLogIntext">Username:  </label><input type="text" name="username" size="60" placeholder="Username" required/><br><br>
-				<label class="userRegAndLogIntext">Password:   </label><input type="password" name="pwd" pattern="(?=. *d)(?=. *[a-z])(?=. *[A-Z])(?=.*?[#?!@$%^&*-\=+]\[]).{8,}" title="Must contain at least number, once uppercase letter, one lowercase letter, and at least 8 or more characters" placeholder="Password" required><br><br>	
+				<label class="userRegAndLogIntext">Password:   </label><input type="password" name="pwd" pattern="(?=. *d)(?=. *[a-z])(?=. *[A-Z])(?=.*?[#?!@$%^&*-\=+]\[]).{8,}" title="Must contain at least number, once uppercase letter, one lowercase letter, and at least 8 or more characters" placeholder="Password" required><br><br>
+			
 				<input type="submit" name="submit" class="buttonRegister buttonRegister1" value= "Log In">
+
+			
+
 			</form>
-
-
 
 
 
 <?php
 
-	//Connects to the database
-	require ("IndividualDatabaseConn.php");
 
-	//Button that triggers insertion of data
+//Connecting to the database
+require ("IndividualDatabaseConn.php");
+
+	//Button that triggers query
    if(isset($_POST["submit"])){
 
    		$username = $_POST['username'];
-   		$password = md5($_POST['pwd']);
-
-   		//Query for counting and comparing data
-   		$query = "SELECT COUNT(*)  AS total  FROM userregister WHERE Username = '".$username."' and Password = '".$password."'";
+   		$password = $_POST['pwd'];
 
 
-   		//Execution of query
+   		//Query to count and compare data
+   		$query = "SELECT COUNT(*) AS total FROM `admin_details` WHERE `username` = '".$username."' and `password` = '".$password."'";
+
+
+   		//Executing query
    		$result = mysqli_query($conn, $query);
 
-   		//Retrieving data
+   		//Retrieving dara
    		$rw = mysqli_fetch_array($result);
 
-
-   		//Check for username and password
+   		//Checking username and password
    		if($rw['total'] > 0){
-   			header("location: IndividualHomepg.php");
+   			header("location: admin_homepage.php");
 
    		}
 
@@ -80,7 +86,7 @@
 
 
 
-		$conn->close();
+$conn->close();
 
 
    }

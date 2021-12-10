@@ -1,37 +1,36 @@
 <?php
 
+			//Button that triggers redirection of page
 			 if(isset($_POST["submit1"])){
-					 		header("location: Abs.php");
+					 		header("location: Abs_Exercise.php");
 					 }
 
 
 				 elseif (isset($_POST["submit2"])) {
-				 		 header("location: Chest.php");
+				 		 header("location: Chest_Exercise.php");
 				 }
 
 
 				 elseif (isset($_POST["submit3"])) {
-				 		 header("location: Biceps.php");
+				 		 header("location: Biceps_Exercise.php");
 				 }
 
 
 				 elseif (isset($_POST["submit4"])) {
-				 		 header("location: Calves.php");
+				 		 header("location: Calves_Exercise.php");
 				 }
 
 
 				 elseif (isset($_POST["submit5"])) {
-				 		 header("location: Glutes.php");
+				 		 header("location: Glutes_Exercise.php");
 				 }
 
 				 elseif (isset($_POST["submit6"])) {
-				 		 header("location: All-round.php");
+				 		 header("location: All-round_Exercise.php");
 				 }
 
 
-			?>
-
-
+	?>
 
 
 
@@ -42,6 +41,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
 	<title>HealthiumCo</title>
 	<link href="mystyle2.css" rel="stylesheet" type="text/css">
@@ -51,20 +51,23 @@
 	</head>
 
 
-<body>
+	<body>
+
+		<!--Navigation bar-->
+		<ul>
+			<li ><a href="IndividualHomepg.php">Home</a></li>
+			<li ><a href="IndividualContributors.php">Contributors</a></li>
+			<li ><a href="IndividualFeedback.php">Feedback</a></li>
+			<li ><a href="Schedules.php">Schedules</a></li>
+		</ul>
+
+		<br><br><br>
 
 
-	<ul>
-		<li ><a href="IndividualHomepg.php">Home</a></li>
-		<li ><a href="IndividualContributors.php">Contributors</a></li>
-		<li ><a href="IndividualFeedback.php">Feedback</a></li>
-		<li ><a href="Schedules.php">Schedules</a></li>
-	</ul>
-
-	<br><br><br>
-	<p class="descriptiontext">You can choose a target area on your body that you want to focus on or choose all-round
+		<p class="descriptiontext">You can choose a target area on your body that you want to focus on or choose all-round
 	to work out your whole body at once</p>
 
+	<!--Buttons to take you to another page-->
 	<form action="" method="post">
 		<input type="submit" name="submit1" class="buttonKeepFitchoice buttonKeepFitchoicehover" value="Abs">
 		<input type="submit" name="submit2" class="buttonKeepFitchoice buttonKeepFitchoicehover" value="Chest">
@@ -75,23 +78,7 @@
 	</form>
 
 
-	<!-- <table border="2">
-  <tr>
-    <td>ID</td>
-    <td>Departure time</td>
-    <td>Departure date</td>
-    <td>Destination</td>
-    <td>Phone number of Companion</td>
-    <td>Expected return date</td>
-    <td>Status</td>
-  </tr> -->
-
-
-
 	
-
-
-
 
 
 	</body>

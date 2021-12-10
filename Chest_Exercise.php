@@ -4,13 +4,10 @@
 	<meta charset="utf-8">
 	<title>HealthiumCo</title>
 	<link href="mystyle2.css" rel="stylesheet" type="text/css">
-	<link href="mystyle.css" rel="stylesheet" type="text/css">
 	<style>
 		<?php include("mystyle2.css"); ?>
 	</style>
-</head>
-
-
+	</head>
 
 
 	<body>
@@ -23,32 +20,27 @@
 			<li ><a href="Schedules.php">Schedules</a></li>
 		</ul>
 
+		<br><br><br>
+
+		<p class="descriptiontext">Try out these recommended exercises to get the Chest of your dreams!</p>
+
 		<br><br>
 
-		<p class="letshelpyoutext">Schedules</p>
-
-		
-		<table id="contributors">
+			<table border="2" id="contributors">
   		<tr>
-    		<th>Name</th>
-    		<th>Contributor</th>
-    		<th>Date</th>
-    		<th>Time</th>
-    		<th>Edit</th>
-    		<th>Delete</th>
-   
+    		<th>Contributors</th>
+    		<th>Exercises</th>
    
   		</tr>
 
 
-
-  	<?php
+  		<?php
 
 			//Connecting to the database
 			require("IndividualDatabaseConn.php");
 
 			//Query to retrieve data from the database
-			$query = "SELECT * FROM  booking";
+			$query = "SELECT contributors.name, keepfit.chest FROM keepfit LEFT JOIN contributors ON keepfit.contributorid = contributors.id  WHERE keepfit.keepfitid = 'KFE'";
 
 		
 			//Execution of query
@@ -62,12 +54,8 @@
 ?>
 		<table id="contributors">
 				<tr>
-    				<td><?php echo $row['fname']. ' ' . $row['lname']; ?></td>
-    				<td><?php echo $row['contributor_name']; ?></td>
-    				<td><?php echo $row['meeting_date']; ?></td>
-    				<td><?php echo $row['meeting_time']; ?></td>
-    				<td><a href="EditContributors.php?id=<?php echo $row['contributor_name']; ?>">Edit</a></td>
-    				<td><a href="DeleteBooking.php?id=<?php echo $row['id']; ?>">Delete</a></td>
+    				<td><a href="IndividualContributors.php" style="text-decoration: none;"><?php echo $row['name']; ?></a></td>
+    				<td><?php echo $row['chest']; ?></td>
   				</tr>	
 <?php
 
@@ -82,5 +70,19 @@
 			?>
 
 			</table>
+
+
+
+
+
+  	
+
+
+
+
+
+
+
+
 
 	</body>

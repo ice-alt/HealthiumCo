@@ -4,33 +4,46 @@
 	<meta charset="utf-8">
 	<title>HealthiumCo</title>
 	<link href="mystyle2.css" rel="stylesheet" type="text/css">
+	<link href="mystyle.css" rel="stylesheet" type="text/css">
 	<style>
 		<?php include("mystyle2.css"); ?>
 	</style>
-	</head>
+</head>
+
+
 
 
 	<body>
 
+		<ul>
+			<li ><a href="admin_homepage.php">Home</a></li>
+			<li ><a href="index2.php">Log In As User</a></li>
+		</ul>
 
+		<br><br>
 		
 
-
-			<table border="2">
+	<p class="letshelpyoutext">Schedules</p>
+	
+		<table id="contributors">
   		<tr>
-    		<th>Contributors</th>
-    		<th>Exercises</th>
+    		<th>Name</th>
+    		<th>Contributor</th>
+    		<th>Date</th>
+    		<th>Time</th>
+   
    
   		</tr>
 
 
-<?php
+
+  	<?php
 
 			//Connecting to the database
 			require("IndividualDatabaseConn.php");
 
 			//Query to retrieve data from the database
-			$query = "SELECT contributors.name, keepfit.abs FROM keepfit LEFT JOIN contributors ON keepfit.contributorid = contributors.id  WHERE keepfit.keepfitid = 'KFE'";
+			$query = "SELECT * FROM  booking";
 
 		
 			//Execution of query
@@ -42,10 +55,12 @@
 			if($result->num_rows > 0){
 				while($row = $result->fetch_assoc()){
 ?>
-		<table>
+		<table id="contributors">
 				<tr>
-    				<td><?php echo $row['name']; ?></td>
-    				<td><?php echo $row['abs']; ?></td>
+    				<td><?php echo $row['fname']. ' ' . $row['lname']; ?></td>
+    				<td><?php echo $row['contributor_name']; ?></td>
+    				<td><?php echo $row['meeting_date']; ?></td>
+    				<td><?php echo $row['meeting_time']; ?></td>
   				</tr>	
 <?php
 
@@ -60,17 +75,6 @@
 			?>
 
 			</table>
-
-
-
-
-
-  	
-
-
-
-
-
 
 
 

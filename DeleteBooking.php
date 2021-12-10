@@ -2,7 +2,7 @@
 
 
 
-
+    //Connecting to database
 	require("IndividualDatabaseConn.php");
 
 
@@ -13,7 +13,7 @@
 if($del)
 {
     mysqli_close($conn); // Close connection
-    header("location:Schedules.php"); // redirects to all records page
+    header("location:Schedules.php"); // redirects to another page
     exit;	
 }
 else

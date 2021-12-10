@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
 	<title>HealthiumCo</title>
 	<link href="mystyle2.css" rel="stylesheet" type="text/css">
@@ -12,14 +11,20 @@
 </head>
 
 
-
 	<body>
-		<br><br><br><br>
-		<p class="appointmentconfirmed">Appointment confirmed!</p>
 
-		<!--Button redirects to another page-->
+
+		<ul>
+			<li ><a href="admin_homepage.php">Home</a></li>
+			<li ><a href="index2.php">Log In As User</a></li>
+		</ul>
+
+		
+		<br><br><br><br>
+		<p class="appointmentconfirmed">Thank you for your contribution!</p>
+
 		<form action="" method="post">
-			<input type="submit" name="submit" class="buttonRegister buttonRegister1" value= "Go to Schedules">
+			<input type="submit" name="submit" class="buttonRegister buttonRegister1" value= "OK">
 		</form>
 
 
@@ -28,9 +33,9 @@
 	<?php
 
 
-		//triggers redirection to another page
+
 		if(isset($_POST["submit"])){
-			header("location: Schedules.php");
+			header("location: admin_homepage.php");
 		}
 
 
@@ -38,5 +43,4 @@
 
 
 	?>
-
 		</body>
